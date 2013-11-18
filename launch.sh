@@ -3,7 +3,7 @@
 # All the .-prefixed files
 files=(aliases exports functions gemrc gitconfig gitignore LS_COLORS sqliterc vimrc wgetrc zshrc)
 
-for $file in ($files); do
+for $file ($files); do
 	cp $file $HOME/.$file
 done
 
