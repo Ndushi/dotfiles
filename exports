@@ -5,6 +5,7 @@ PATH=/usr/local/share/npm/bin:$PATH 				# npm
 PATH=$HOME/bin:$PATH 								# user bin folder
 export PATH
 
+export LESS_TERMCAP_md=$'\E[06;33m'
 
 # Add coreutils to manpath 
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
