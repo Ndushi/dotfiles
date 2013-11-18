@@ -1,0 +1,90 @@
+[user]
+	name = Johan Lindskogen
+	email = johan.lindskogen@gmail.com
+
+[alias]
+	# Show verbose output about tags, branches or remotes
+	tags = tag -l
+	branches = branch -a
+	remotes = remote -v
+	configs = config -l
+	c = commit
+	ca = commit -a
+	cm = commit -m
+	cam = commit -am
+	amend = commit --amend
+	glog = log --format='%C(cyan)%h%Creset %Cgreen%an%Creset\t%s' --graph
+	d = diff
+	dc = diff --cached
+	s = status
+	co = checkout
+	unstage = reset HEAD
+	# Credit an author on the latest commit
+	# Undo a `git push`
+	undopush = push -f origin HEAD^:master
+
+[apply]
+	# Detect whitespace errors when applying a patch
+	whitespace = fix
+
+[core]
+	# Use custom `.gitignore` and `.gitattributes`
+	excludesfile = ~/.gitignore
+	attributesfile = ~/.gitattributes
+	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
+	whitespace = space-before-tab,indent-with-non-tab,trailing-space
+	editor = subl -w
+
+[diff]
+	prompt = false
+
+[color]
+	# Use colors in Git commands that are capable of colored output when outputting to the terminal
+	ui = auto
+[color "branch"]
+	current = green bold
+	local = yellow
+	remote = yellow
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red reverse
+	new = green reverse
+	whitespace = white reverse
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+	branch = green
+[merge]
+	# Include summaries of merged commits in newly created merge commit messages
+	log = true
+
+# Use `origin` as the default remote on the `master` branch in all cases
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+
+[format]
+	pretty = %C(cyan)%h%C(green) %an\t%Creset%s
+
+[difftool]
+	prompt = false
+
+# URL shorthands
+[url "https://github.com/"]
+	insteadOf = "github:"
+
+[push]
+	default = simple
+
+[remote "origin"]
+	push = HEAD
+
+[github]
+	user = Ndushi
+
+[credential]
+	helper = osxkeychain
+[diff "exif"]
+	textconv = exiftool

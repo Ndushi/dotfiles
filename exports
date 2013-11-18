@@ -1,0 +1,17 @@
+# PATH additions
+PATH=/usr/local/bin:$PATH 							# homebrew
+PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH 	# unprefixed coreutils
+PATH=/usr/local/share/npm/bin:$PATH 				# npm
+PATH=$HOME/bin:$PATH 								# user bin folder
+export PATH
+
+
+# Add coreutils to manpath 
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+# Make sublime the default editor
+export EDITOR="subl -w"
+
+# dircolors from LS_COLORS
+eval $( dircolors -b $HOME/.LS_COLORS )
+export CLICOLOR=true
