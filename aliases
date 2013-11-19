@@ -1,8 +1,10 @@
-alias s="subl -n ."
 alias o="open"
 alias oo="open ."
+alias ls="ls --color=auto"
 
 alias gs="git status"
+alias s="subl -n ."
+
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
