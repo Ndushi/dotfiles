@@ -8,3 +8,6 @@ compdef _p p
 insert_sudo () { zle beginning-of-line; zle -U "sudo " }
 zle -N insert-sudo insert_sudo
 bindkey "^[s" insert-sudo
+
+# sh completion
+compdef '_files -g "*.sh"' sh
