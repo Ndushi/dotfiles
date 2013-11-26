@@ -69,3 +69,9 @@ au BufRead,BufNewFile .zsh_rc,.functions,.commonrc set ft=zsh
 
 " Rainbow Parenthesis
 nnoremap <leader>rp :RainbowParenthesesToggle<CR>
+
+" Rebind W to sudo write
+command W w !sudo tee % > /dev/null
+
+" Q -> q
+command Q q
