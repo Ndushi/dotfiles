@@ -1,10 +1,4 @@
-# PATH additions
-PATH=/usr/local/bin:$PATH 							# homebrew
-PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH 	# unprefixed coreutils
-PATH=/usr/local/share/npm/bin:$PATH 				# npm
-PATH=$HOME/bin:$PATH 								# user bin folder
-export PATH
-
+# man pages coloring
 export LESS_TERMCAP_md=$'\E[06;33m'
 
 # Add coreutils to manpath 

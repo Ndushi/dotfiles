@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # All the .-prefixed files
-files=(aliases exports functions gemrc gitconfig gitignore irbrc LS_COLORS sqliterc vimrc wgetrc zshrc)
+files=(aliases exports functions gemrc gitconfig gitignore irbrc LS_COLORS path sqliterc vimrc wgetrc zshenv zshrc)
 
 for file in ${files[@]}; do
 	cp "$file" "$HOME/.$file"

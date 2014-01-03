@@ -45,9 +45,7 @@ plugins=(brew bundler gem gitfast git-flow ndushi rails osx sublime)
 source $ZSH/oh-my-zsh.sh
 
 # source my stuff
+[ -f "$HOME/.zshenv" ] && source "$HOME/.zshenv"
 [ -f "$HOME/.exports" ] && source "$HOME/.exports"
 [ -f "$HOME/.aliases" ] && source "$HOME/.aliases"
 [ -f "$HOME/.functions" ] && source "$HOME/.functions"
-
-# rbenv initialization
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
