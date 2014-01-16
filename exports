@@ -8,5 +8,5 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export EDITOR="subl -w"
 
 # dircolors from LS_COLORS
-eval $( dircolors -b $HOME/.LS_COLORS )
-export CLICOLOR=true
+# eval $( dircolors -b $HOME/.LS_COLORS )
+# export CLICOLOR=true

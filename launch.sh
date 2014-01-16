@@ -1,10 +1,12 @@
 #!/bin/bash
 
+DIR="$PWD"
+
 # All the .-prefixed files
 files=(aliases exports functions gemrc gitconfig gitignore irbrc LS_COLORS path sqliterc vimrc wgetrc zshenv zshrc)
 
 for file in ${files[@]}; do
-	cp "$file" "$HOME/.$file"
+	cp "$DIR/$file" "$HOME/.$file"
 done
 
 unset $file
@@ -19,5 +21,6 @@ if [[ ! -d $HOME/.oh-my-zsh ]]; then
 fi
 
 # Copy my own custom config for omz
-rm -rf $HOME/.oh-my-zsh/custom
-cp -r custom.oh-my-zsh $HOME/.oh-my-zsh/custom
+# rm -rf $HOME/.oh-my-zsh/custom
+[ -h $HOME/.oh-my-zsh/custom/themes ] || ln -s $DIR/custom.oh-my-zsh/themes $HOME/.oh-my-zsh/custom/themes
+[ -h $HOME/.oh-my-zsh/custom/plugins ] || ln -s $DIR/custom.oh-my-zsh/plugins $HOME/.oh-my-zsh/custom/plugins
