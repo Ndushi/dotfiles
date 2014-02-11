@@ -12,7 +12,7 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+
 
 alias ql='qlmanage -p "$1" >& /dev/null'
 
-alias update='brew update; brew upgrade; brew cleanup; gem update --system; gem update; cd $ZSH; sh tools/upgrade.sh'
+alias update='brew update; brew upgrade; brew cleanup; gem update --system; gem update; npm update -g; cd $ZSH; sh tools/upgrade.sh; cd -'
 
 # Enhanced WHOIS lookups
 alias whois="whois -h whois-servers.net"
