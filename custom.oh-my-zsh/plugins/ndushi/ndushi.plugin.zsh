@@ -14,8 +14,8 @@ compdef '_files -g "*.sh"' sh
 
 
 # history haxx, from: http://superuser.com/a/691603
-bindkey "${key[Up]}" up-line-or-local-history
-bindkey "${key[Down]}" down-line-or-local-history
+bindkey "[[1;5A" up-line-or-local-history
+bindkey "[[1;5B" down-line-or-local-history
 
 up-line-or-local-history() {
     zle set-local-history 1
