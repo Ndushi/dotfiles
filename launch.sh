@@ -12,6 +12,7 @@ done
 unset $file
 
 # Copy my vim configuration
+rm -rf $HOME/.vim
 cp -r vim $HOME/.vim
 
 
