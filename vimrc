@@ -48,6 +48,9 @@ set tabstop=4 " Visually set how tabs are displayed
 set softtabstop=4 " How many columns vim uses when you hit tab in insert mode
 set noexpandtab " Never expand tabs to spaces
 
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
 
 " JSON
 au BufRead,BufNewFile *.json set ft=json syntax=javascript
